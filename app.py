@@ -148,7 +148,7 @@ st.markdown(
     @media (prefers-reduced-motion: reduce) {
         * { animation: none !important; transition: none !important; }
     }
-        /* ===== Mobile layout ===== */
+    /* ===== Mobile layout ===== */
     @media (max-width: 640px) {
         .stApp { overflow-x: hidden; }
         .stApp::before, .stApp::after { display: none; }
@@ -183,7 +183,7 @@ st.markdown(
 
 # ---------- Header ----------
 st.markdown('<h1 class="hero-title">🤖 AI Chat Assistant</h1>', unsafe_allow_html=True)
-st.markdown('<p class="hero-sub">Chat naturally, Understand your documents instantly.</p>', unsafe_allow_html=True)
+st.markdown('<p class="hero-sub">Ask anything, or upload a document for answers grounded in your own content</p>', unsafe_allow_html=True)
 
 
 # ---------- RAG helpers ----------
