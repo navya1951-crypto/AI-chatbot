@@ -148,6 +148,34 @@ st.markdown(
     @media (prefers-reduced-motion: reduce) {
         * { animation: none !important; transition: none !important; }
     }
+        /* ===== Mobile layout ===== */
+    @media (max-width: 640px) {
+        .stApp { overflow-x: hidden; }
+        .stApp::before, .stApp::after { display: none; }
+
+        [data-testid="stMainBlockContainer"] {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 3.5rem !important;
+        }
+        .hero-title { font-size: 1.7rem; }
+        .hero-sub { font-size: 0.9rem; padding: 0 0.5rem; }
+
+        [data-testid="stChatMessage"],
+        [data-testid="stChatMessage"]:has([data-testid="stChatMessageAvatarUser"]) {
+            padding: 0.7rem 0.8rem;
+            border-radius: 14px;
+            animation-name: fadeUp;
+        }
+        .stButton > button { padding: 0.6rem 0.7rem; font-size: 0.9rem; }
+        .mode-pill { font-size: 0.75rem; }
+    }
+
+    /* Stop hover effects from sticking on touch screens */
+    @media (hover: none) {
+        [data-testid="stChatMessage"]:hover,
+        .stButton > button:hover { transform: none; }
+    }
     </style>
     """,
     unsafe_allow_html=True,
